@@ -1,0 +1,70 @@
+/*The guide for styling generic*/
+
+/* CSS RESET */
+
+*, *::after, *::before {
+    box-sizing:border-box;
+}
+
+
+/* Pick these colors during moodboard and styleguide phase, write them down somewhere for reference during design */
+:root{
+    --color-neutral-light: #eee ;
+    --color-neutral-medium: #999;
+    --color-neutral-light: #555;
+
+/* Rem: root em value based in document size */
+    --header-height:3rem;
+    --spacing:1rem;
+}
+
+/*Target elements commonly changed by designer */
+/*Setting margin to 0 helps have a more flexible design layout */
+/* Choose a font that degrades down and is avaiable on all types of deevices, no use serif, not readible */
+body{
+    margin:0;
+    font-size: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,{
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* anchors inherit from parents */
+a{
+    color:inherit;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+
+/*Layout Classes */
+
+.container{
+    max-width:800px;
+    margin-right:auto;
+    margin-left:auto;    
+}
+
+
+.display-flex{display:flex;}
+.display-inline-flex{display:inline-flex;}
+.display-block{display:block;}
+.display-inline-block{display:inline-block;}
+
+/* grow shrink basic */
+.flex-stretch{flex: 1 1 auto;}
+.flex-none{flex:none;}
+
+.flex-align-center{align-items:center;}
+.flex-justify-center{justify-content:center;}

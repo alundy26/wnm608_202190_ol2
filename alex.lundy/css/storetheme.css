@@ -1,2 +1,8 @@
 /*This is specific to website only */
+:root{
+    --color-offwhite: #f4f4f4;
+}
 
+body{
+    background-color:var(--color-offwhite);
+}

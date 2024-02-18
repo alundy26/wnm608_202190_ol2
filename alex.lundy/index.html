@@ -5,28 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cool Website</title>
     <link rel="stylesheet" href="lib/css/styleguide.css">
+    <link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
     
     <!-- header>h1+p-->
-    <header class="container">
+    <header class="navbar">
+        <div class="container display-flex">
+            <div class="flex-none">
         <h1>Cool Website</h1>
-        <p>Such a cool website</p>
+    </div>
+    <div class="flex-stretch"></div>
+        <nav class="flex-none nav">
+            <ul class="container display-flex">
+                <li class="flex-stretch"><a href="#article1">Link 1</a></li>
+                <li class="flex-stretch"><a href="#article2">Link 2</a></li>
+                <li class="flex-stretch"><a href="#article3">Link 3</a></li>
+                <li class="flex-stretch"><a href="#article4">Link 4</a></li>
+            </ul>
+        </nav>
+    </div>
     </header>
 
     <!-- nav.nav>ul>li*4>a[href=#article$]>{Link $}-->
-    <nav class="nav">
-        <ul class="container display-flex">
-            <li class="flex-stretch"><a href="#article1">Link 1</a></li>
-            <li class="flex-stretch"><a href="#article2">Link 2</a></li>
-            <li class="flex-stretch"><a href="#article3">Link 3</a></li>
-            <li class="flex-stretch"><a href="#article4">Link 4</a></li>
-        </ul>
-    </nav>
+   
 
    <!-- .container>article#article$.article*4>h2{Article $}+div.article-body>p*3>lorem40-->
     <div class="container">
-        <article id="article1" class="article">
+        <article id="article1" class="article card soft">
             <div class="display-flex flex-align-center">
                 <div class="flex-stretch">
                     <h2>Article 1</h2>
@@ -41,7 +47,7 @@
                 <p>Fugiat eius obcaecati optio impedit quidem, expedita commodi vel fugit nostrum illo possimus, illum aspernatur explicabo, adipisci sunt voluptates rem consectetur amet officia dignissimos eligendi dolorum minus omnis deserunt. Ratione, officia? Commodi quam porro perferendis quis magni labore facere impedit.</p>
             </div>
         </article>
-        <article id="article2" class="article">
+        <article id="article2" class="article card hard">
             <h2>Article 2</h2>
             <div class="article-body">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto reiciendis accusamus, est culpa enim reprehenderit nobis corrupti ex amet recusandae corporis laborum odit consequatur ullam aspernatur laboriosam, qui dolore! Quia illo sequi asperiores eaque accusamus libero hic autem voluptate quas?</p>

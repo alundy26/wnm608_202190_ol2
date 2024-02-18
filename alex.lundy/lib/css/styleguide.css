@@ -11,11 +11,17 @@
 :root{
     --color-neutral-light: #eee ;
     --color-neutral-medium: #999;
-    --color-neutral-light: #555;
+    --color-neutral-dark: #555;
+
+    --color-black:#000;
+    --color-white: #fff;
 
 /* Rem: root em value based in document size */
     --header-height:3rem;
     --spacing:1rem;
+
+    --font-serif: Georgia, "Times New Roman", serif;
+    --font-sans: Helvetica, Arial, sans-serif;
 }
 
 /*Target elements commonly changed by designer */
@@ -24,7 +30,7 @@
 body{
     margin:0;
     font-size: 100%;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
 }
 
 h1,
@@ -33,7 +39,7 @@ h3,
 h4,
 h5,
 h6,{
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--font-serif);
 }
 
 /* anchors inherit from parents */
@@ -68,3 +74,88 @@ a:hover{
 
 .flex-align-center{align-items:center;}
 .flex-justify-center{justify-content:center;}
+
+
+/*Component classes */
+
+.nav ul{
+    list-style-type:none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.navbar{
+    background-color:var(--color-neutral-dark);
+    color:var(--color-white);
+    line-height:var(--header-height);
+}
+
+.navbar h1{
+    font-size:1em;
+    margin: 0;
+    font-family:var(--font-sans);
+}
+
+.navbar a{
+    padding: 0 0.5em;
+}
+
+/*CARD */
+.card {
+    background-color:var(--color-white);
+    margin-top:1em;
+    margin-bottom: 1em;
+    padding: 1em;
+
+    overflow:hidden;
+    position:relative; 
+}
+
+.card.soft{
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card.hard{
+    border-radius: 0.2em;
+    border:2px solid var(--color-neutral-medium);
+}
+
+
+.card.dark{
+    background-color: var(--color-neutral-dark);
+    color:var(--color-neutral-light);
+}
+
+.view-window{
+    height:50vh;
+    position:relative;
+    overflow:hidden;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,10 +9,13 @@
     gap:var(--grid-gap);
 }
 
+<<<<<<< HEAD
 .grid.ten{
     grid-template-columns: repeat(10, 1fr) ;
 }
 
+=======
+>>>>>>> 0c5e5b201d47fdea5ad4ec712c219c0b130ba182
 .col-1{grid-column: span 1;}
 .col-2{grid-column: span 2;}
 .col-3{grid-column: span 3;}

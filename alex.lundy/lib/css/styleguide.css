@@ -263,6 +263,23 @@ padding: 0.5em 1em;
 
 
 
+.form-input[
+    display:inline-block;
+    background-color:transparent;\
+    border-widthL0;
+    padding: 0.2em 0.5em;
+    font:inherit;
+    width: 100%
+    -webkit-appearance: none;
+    color: inherit;
+    width: 1005
+    border-bottom:1 px solid var(--color-neutral-medium);
+    outline: 0;
+]
+
+.form-input:focus{
+    border-bottom-color: var(--color-main-light);
+}
 
 
 

@@ -1,0 +1,357 @@
+ <!DOCTYPE html>    
+ <html lang="en">
+ <head>
+    <meta name ="viewport" content="width=device-width">
+    
+    
+    <link rel="stylesheet" href="../lib/css/styleguide.css">
+    <link rel="stylesheet" href="../lib/css/gridsystem.css">
+    <link rel="stylesheet" href="../css/storetheme.css">
+ </head>
+ <body>
+
+    <header class="navbar">
+        <div class="container display-flex">
+            <div class="flex-none">
+                <h1>Styleguide</h1>
+            </div>
+            <div class="flex-stretch"></div>
+            <nav class="flex-none nav">
+                <ul class="container display-flex">
+                    <li><a href="#tableofcontents">Table of Contents </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container" id="tableofcontents">
+                <h2>Table of Contents</h2>
+                <div class="card">
+            <nav class="nav">
+            <ul><li><a href="#typography">Typography</a></li><ul>
+                <li><a href="#headings">Headings</a></li>
+                <li><a href="#paragraphs">Paragraphs</a></li>
+            </ul>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#viewWindow">View Window</a></li>
+            <li><a href="#navigations">Navigations</a></li>
+            <li><a href="#gridsystem">Grid System</a></li>
+            <li><a href="#flexsystem">Flex System</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <ul><li><a href="#inputs">Inputs</a></li></ul>
+            
+            
+
+            </ul>
+        </nav>
+        </div>
+    </div>
+
+    <div class="container" id="#typography">
+        <h2>Typography</h2>
+        <div class="card soft" id="#headings">
+            
+
+            <H3>Headings</H3>
+            <h1>Heading 1 </h1>
+            <h2>Heading 2 </h2>
+            <h3>Heading 3 </h3>
+            <h4>Heading 4 </h4>
+            <h5>Heading 5 </h5>
+            <h6>Heading 6 </h6>
+            </div>
+            <div class="card soft" id="paragraphs">
+
+            <h3>Paragraphs</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eaque quod laborum sit eos quasi ratione molestiae eveniet magni libero veritatis sed? Ratione harum possimus modi? Consequuntur cum deserunt eos!</p>
+            <p>Architecto eos aspernatur quo exercitationem explicabo quis ratione dolores, natus eum voluptatibus eligendi alias, totam porro a quibusdam temporibus, molestias assumenda distinctio nobis iure maiores. Ducimus ea illo assumenda atque!</p>
+            <p>Necessitatibus repudiandae saepe, corrupti, blanditiis consequuntur illum libero tenetur consectetur earum, hic ab perferendis nobis. Voluptatibus odio ratione dolores deserunt! Eveniet eius aliquid, id natus optio tempore quibusdam ex porro.</p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h2>Cards</h2>
+        <div class="grid gap">
+            <div class="col-xs-12 col-md-4">
+                <div class="card">Card</div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card soft">Card Soft</div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card hard">Card Hard</div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card flat">Card Flat</div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card dark">Card Dark</div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card medium">Card Medium</div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="container">
+        <h2>View Window</h2>
+    </div>
+
+    <div class="container">
+        <h2>Navigations</h2>
+        
+        <script>
+            const makeNav = (classes='') => {
+                const links =['home', 'store', 'about'];
+                document.write(`
+                <div>
+                <nav class="${classes}">
+                    <ul>
+                        ${links.reduce((r,o,i)=>{
+                            return r+'<li><a href="#">${o}</a></li>';
+                        },'')}
+                       
+                        </ul>
+                        </nav>
+                        </div  >
+
+                        `);
+            } 
+        </script>
+
+        <div class="card soft">
+            <h3>Basic Nav1</h3>
+            <script>makeNav('nav')</script>
+        </div>
+
+<div class="card soft">
+    <h3>Basic Nav</h3>
+    <nav class="nav">
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </nav>`
+
+
+
+        <div class="card soft">
+            <h3>Basic Nav</h3>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="card soft">
+            <h3>Flex Nav</h3>
+            <nav class="nav nav-flex">
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </nav>
+
+    </div>
+    <div class="card soft">
+        <h3>Stretch Nav</h3>
+        <nav class="nav nav-stretch">
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+
+
+</div>
+<div class="card soft">
+    <h3>Pills Nav</h3>
+    <nav class="nav nav-pills">
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </nav>
+
+
+</div>
+
+<div class="card soft">
+    <h3>Crumbs Nav</h3>
+    <nav class="nav nav-crumbs">
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+    <div class="card soft">
+    <h3>Materials Nav</h3>
+    <nav class="nav nav-material">
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div class="container">
+        <h2>Grid System</h2>
+    </div>
+
+    <div class="container">
+        <h2>Flex System</h2>
+    </div>
+  </div>
+    <div class="container">
+        <h2>Tables</h2>
+
+<script>
+    const makeTable = (classes='') =>{
+        const head =['ID ','Student Number', 'Degree ', 'Name ','Graduation Year'];
+        const body =[
+        ['04778598', "UX/UI Design", "Alex Lundy", '2024'],
+        ['04778598', "UX/UI Design", "Alex Lundy", '2024'],
+        ['04778598', "UX/UI Design", "Alex Lundy", '2024'],
+        ['04778598', "UX/UI Design", "Alex Lundy", '2024'],
+    ];
+        document.write(`
+        <table class="${classes}"> 
+            <thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`, '')}</tr></thead>
+                <tbody>${body.reduce((r,o,i)=>r+
+                    `<tr>${
+                            [i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
+                    }</tr>`,'')
+                }</tbody>
+                </table>
+                `);
+            }
+
+    
+    </script>
+
+
+<div class="container">
+    <h2>Tables</h2>
+
+    <div class="card soft">
+        <h3>Basic Table</h3>
+        <script>makeTable("table")</script>
+    </div>
+
+
+</div>
+
+
+
+<div class="card soft">
+    <h3>Striped Table</h3>
+
+    <script>makeTable("table striped")</script>
+</div>
+
+</div>
+
+
+<div class="card soft">
+    <h3>Striped Lined Vertical</h3>
+
+    <script>makeTable("table lined vertical")</script>
+    </div>
+</div>
+
+<div class="card soft">
+    <h3> Striped Lined Horizonal </h3>
+    <script> makeTable("table lined horizontal") </script> 
+</div>
+
+</div>
+
+
+    <h3>Basic Figure </h3>
+
+    <figure class="figure">
+        <img src="https://via.placeholder.com/400x400?text=product" alt="">
+        <figcaption>Product</figcaption>
+
+    </figure>
+
+
+
+
+
+</div>
+
+<div class="grid gap"› <div class="col-xs-12 col-and-4">
+     <figure class="figure product"> 
+        <img src="https://via.placeholder.com/400x400?text=product" alt="">
+         <figcaption>Product</figcaption>
+         </figure>
+         </div> 
+         <div class="col-xs-12 col-and-4"> 
+            <figure class="figure product"> 
+                <img src="https://via.lplacehold 0x400?text=product" alt="">
+                 <figcaption>Product</figcaption> </figure> 
+            </div>
+             <div class="col-xs-12 col-and-4"> 
+                <figure class="figure product">
+                     <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                      <figcaption>Product</figcaption> 
+                    </figure> </div> </div> </div> 
+
+
+<div class="container" id="forms">
+    <h2>Forms</h2>
+
+    <h3> Inputs</h3>
+    <div class="card soft">
+        <h3>Default Inputs</h3>
+        <form>
+            <input type="text"><br>
+            <input type="number"><br>
+            <input type="password"><br>
+            <input type="url"><br>
+            <input type="email"><br>
+            <input type="datetime-local"><br>
+            <input type="date"><br>
+            <input type="search"><br>
+
+        </form>
+        <h3>Form Input</h3>
+        <form>
+            <input type="text" class="form-input">
+    
+        </form>
+
+    </div>
+</div>
+
+
+
+
+ </body>
+
+</html>

@@ -13,6 +13,10 @@
     --color-neutral-medium: #999;
     --color-neutral-dark: #555;
 
+    --color-main-light:#cbebf9;
+    --color-main-medium:#2592c3;
+    --color-main-dark:darkblue;
+
     --color-black:#000;
     --color-white: #fff;
 
@@ -75,7 +79,11 @@ a:hover{
 .flex-align-center{align-items:center;}
 .flex-justify-center{justify-content:center;}
 
-
+/* Small Classes */
+.media-image{
+    max-width:100%;
+    vertical-align: text-bottom;
+}
 /*Component classes */
 
 .nav ul{
@@ -84,6 +92,69 @@ a:hover{
     margin-bottom: 0;
     padding-left: 0;
 }
+
+.nav a {
+    display: block;
+    padding: 0.2em 0.5em;
+}
+.nav a:hover {
+    background-color: var(--color-main-medium);
+    color:var(--color-white);
+    text-deecoration:none;
+}
+
+.nav-material ul,
+.nav-crumbs ul,
+.nav-pills ul,
+.nav-flex ul,
+.nav-stretch ul{
+    display:flex;
+}
+
+
+
+
+.nav-pills a {
+    border-radius:2em;
+    padding: 0.5em 1em;
+}
+
+.nav-crumbs a{
+   display:inline-block;
+}
+
+.nav-material a:hover,
+.nav-crumbs a:hover{
+    background-color:transparent;
+    color:inherit;
+    text-decoration: underline;
+ }
+
+
+
+.nav-crumbs li:not(:first-child)::before{
+    content: '/';
+}
+
+
+.nav-material a {
+padding: 0.5em 1em;
+}
+
+.nav-material a::after{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--color-main-medium);
+}
+
+.nav-material a:hover::after{
+    height: 4px;
+}
+
 
 .navbar{
     background-color:var(--color-neutral-dark);
@@ -136,20 +207,59 @@ a:hover{
     background-position:center;
     background-attachment: fixed; 
 }
+.table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.table th,
+.table td{
+    text-align:left;
+    padding: 0.2em 0.5em;
+}
+
+.table.striped tbody tr:nth-child(odd) {
+    background-color:var(--color-neutral-light);
+}
+
+.table.lined.all th:not(:first-child),
+.table.lined.all td:not(:first-child),
+.table.lined.vertical th:not(:first-child),
+.table.lined.vertical td:not(:first-child){
+    border-left: 1px solid var(--color-neutral-medium);
+}
+
+.table.lined.horizontal tbody tr{
+    border-top: 1px solid var(--color-neutal-medium);
+}
+
+.table.lined.all,
+.table.lined.border{
+    border: 1px solid var(--color-neutral-medium);
+}
 
 
 
 
+.toggle input:checked + label::after{
+    transform:translateX(1em);
+}
 
 
+.figure{
+    margin: 0;
+    background-color:var(--color-white);
+}
 
+.figure img{
+    width:100%;
+    vertical-align: text-bottom;
+}
 
-
-
-
-
-
-
+.figure figcapion{
+    padding: 1em;
+}
 
 
 

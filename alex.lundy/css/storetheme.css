@@ -89,3 +89,26 @@ body{
 
         }
     }
+	
+	
+	@media(max-width:800px){
+		.container{
+			padding-left:1em;
+			padding-right:1em;
+		}
+		
+		.navbar h1{
+			padding-left:0.5em;
+		}
+	}
+	
+	@media(max-width:400px){
+		.navbar .display-flex{
+			display:block;
+		}
+	}
+	
+	.navbar .nav li{
+		line-height:2em;
+	}
+}

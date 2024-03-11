@@ -261,28 +261,55 @@ padding: 0.5em 1em;
     padding: 1em;
 }
 
+/*Forms*/
+.form-control{
+	margin:1em 0;
+}
 
-
-.form-input[
+.form-button{
     display:inline-block;
-    background-color:transparent;\
-    border-widthL0;
+    background-color:transparent;
+    border-width:0;
     padding: 0.2em 0.5em;
     font:inherit;
-    width: 100%
     -webkit-appearance: none;
     color: inherit;
-    width: 1005
-    border-bottom:1 px solid var(--color-neutral-medium);
+    width: 100%
     outline: 0;
-]
+	border-radius:0.2em;
+	cursor:pointer;
+}
+
 
 .form-input:focus{
     border-bottom-color: var(--color-main-light);
 }
 
 
+.form-label{
+	font-size:0.8em;
+	color:var(--color-neutral-medium);
+	display:block;
+	width:100%
+}
+
+.form-button{
+	display:inline-block;
+	background-color:var(--color-neutral-light);
+	border-width:0;
+	padding: 0.5em 1em;
+	font:inherit;
+	width: 100%
+	outline:0;
+	border-radius:0.2em;
+	cursor:pointer;
+}
 
 
+.form-button:active{
+	background-color:var(--color-main-light);
+}
 
-
+.form-button:hover{
+	text-decoration:none;
+}

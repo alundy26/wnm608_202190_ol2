@@ -9,13 +9,13 @@
 
 /* Pick these colors during moodboard and styleguide phase, write them down somewhere for reference during design */
 :root{
-    --color-neutral-light: #eee ;
-    --color-neutral-medium: #999;
-    --color-neutral-dark: #555;
+    --color-neutral-light: #effdee ;
+    --color-neutral-medium: #e4fde1;
+    --color-neutral-dark: #c6dabf;
 
-    --color-main-light:#cbebf9;
-    --color-main-medium:#2592c3;
-    --color-main-dark:darkblue;
+    --color-main-light:#88D498;
+    --color-main-medium:#cc8899;    
+    --color-main-dark:#41463D;
 
     --color-black:#000;
     --color-white: #fff;
@@ -84,6 +84,8 @@ a:hover{
     max-width:100%;
     vertical-align: text-bottom;
 }
+
+.hidden {display:none; }
 /*Component classes */
 
 .nav ul{
@@ -190,12 +192,12 @@ padding: 0.5em 1em;
 
 .card.hard{
     border-radius: 0.2em;
-    border:2px solid var(--color-neutral-medium);
+    border:2px solid var(--color-main-dark);
 }
 
 
 .card.dark{
-    background-color: var(--color-neutral-dark);
+    background-color: var(--color-main-dark);
     color:var(--color-neutral-light);
 }
 
@@ -220,23 +222,23 @@ padding: 0.5em 1em;
 }
 
 .table.striped tbody tr:nth-child(odd) {
-    background-color:var(--color-neutral-light);
+    background-color:var(--color-neutral-medium);
 }
 
 .table.lined.all th:not(:first-child),
 .table.lined.all td:not(:first-child),
 .table.lined.vertical th:not(:first-child),
 .table.lined.vertical td:not(:first-child){
-    border-left: 1px solid var(--color-neutral-medium);
+    border-left: 1px solid var(--color-main-dark);
 }
 
 .table.lined.horizontal tbody tr{
-    border-top: 1px solid var(--color-neutal-medium);
+    border-top: 1px solid var(--color-main-dark);
 }
 
 .table.lined.all,
 .table.lined.border{
-    border: 1px solid var(--color-neutral-medium);
+    border: 1px solid var(--color-main-dark);
 }
 
 
@@ -264,6 +266,7 @@ padding: 0.5em 1em;
 /*Forms*/
 .form-control{
 	margin:1em 0;
+
 }
 
 .hotdog input,
@@ -274,8 +277,7 @@ padding: 0.5em 1em;
     display:inline-block;
     background-color:transparent;
     border-width:0;
-    font:inherit;
-    padding: 0.5em 1em;
+    -webkit-appearnce:none;
     font:inherit;
     width:100%
     outline:0;
@@ -283,21 +285,15 @@ padding: 0.5em 1em;
 
 .form-input{
     border-bottom: 1px solid var(--color-neutral-light);
-    padding: 0.5em;
+    padding: 0.5em 1em;
 }
 
 .form-button{
-    display:inline-block;
-    background-color:transparent;
-    border-width:0;
-    padding: 0.2em 0.5em;
-    font:inherit;
-    -webkit-appearance: none;
-    color: inherit;
-    width: 100%
-    outline: 0;
-	border-radius:0.2em;
-	cursor:pointer;
+    background-color:var(--color-main-medium);
+    padding: 0.5em 1em;
+    border-radius:0.2em;
+    cursor:pointer;
+    text-align:center;
 }
 
 
@@ -314,7 +310,7 @@ padding: 0.5em 1em;
 }
 
 .form-button{
-	background-color:var(--color-neutral-light);
+	background-color:var(--color-main-medium);
 	border-width:0;
 	padding: 0.5em 1em;
 	font:inherit;
@@ -333,15 +329,15 @@ padding: 0.5em 1em;
 	text-decoration:none;
 }
 
-.hotdog[
+.hotdog{
     background-color:var(--color-neutral-light);
     border-radius: 2em;
     padding: 0.5em 1.5em;
     display:flex;
-]
+}
 
 .hotdog.dark{
-    background-colr:var(--color-neutral-dark);
+    background-color:var(--color-neutral-dark);
     color:var(--color-neutral-light);
 
 }

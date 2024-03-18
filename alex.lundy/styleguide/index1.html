@@ -35,7 +35,7 @@
                     <li><a href="#paragraphs">Paragraphs</a></li>
                  </ol>
             <li><a href="#cards">Cards</a></li>
-            <li><a href="#viewWindow">View Window</a></li>
+            <li><a href="#viewwindow">View Window</a></li>
             <li><a href="#navigations">Navigations</a></li>
             <li><a href="#gridsystem">Grid System</a></li>
             <li><a href="#flexsystem">Flex System</a></li>
@@ -45,15 +45,15 @@
             <li><a href="#inputs">Inputs</a></li>
             <li><a href="#labels">Labels</a></li>
             <li><a href="#controls">Controls</a></li>
-			<li><a href="buttons">Buttons </a></li>
-            <li><a href=#hotdog>Hotdog</a></li>
+			<li><a href="button">Buttons </a></li>
+            <li><a href="#hotdog">Hotdog</a></li>
             <li><a href="#select">Select</a></li>
             <li><a href="#checkboxes">Checkboxes</a></li>
           </ol>
-            <li><a href=#Figures">Figures</a></li>
+            <li><a href="#figures">Figures</a></li>
             <ol>
                 <li><a href="basicfigure">Basic Figure</a></li>
-                <li><a href="#productfigure">Product Figujreli>
+                <li><a href="#productfigure">Product Figure</a></li>
                 <li><a href="#overlayfigure">Overlay Figure</a></li>
             </ol>
 
@@ -113,7 +113,7 @@
     
 <div class="view window" style="background-image:url('../img/artsupplies.jpg')">
 
-    <div class="container">
+    <div class="container" id="viewwindow">
         <h2>View Window</h2>
         <div class="card soft">
 
@@ -248,7 +248,7 @@
         <h2>Flex System</h2>
     </div>
   </div>
-    <div class="container">
+    <div class="container" id="tables">
         <h2>Tables</h2>
 
 <script>
@@ -313,43 +313,12 @@
 </div>
 
 
-    <h3>Basic Figure </h3>
-
-    <figure class="figure">
-        <img src="https://via.placeholder.com/400x400?text=product" alt="">
-        <figcaption>Product</figcaption>
-
-    </figure>
-
-
-
-
-
-</div>
-
-<div class="grid gap"› <div class="col-xs-12 col-and-4">
-     <figure class="figure product"> 
-        <img src="https://via.placeholder.com/400x400?text=product" alt="">
-         <figcaption>Product</figcaption>
-         </figure>
-         </div> 
-         <div class="col-xs-12 col-and-4"> 
-            <figure class="figure product"> 
-                <img src="https://via.lplacehold 0x400?text=product" alt="">
-                 <figcaption>Product</figcaption> </figure> 
-            </div>
-             <div class="col-xs-12 col-and-4"> 
-                <figure class="figure product">
-                     <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                      <figcaption>Product</figcaption> 
-                    </figure> </div> </div> </div> 
-
-
+        
 <div class="container" id="forms">
     <h2>Forms</h2>
 
     <h3> Inputs</h3>
-    <div class="card soft">
+    <div class="card soft" id="inputs">
         <h3>Default Inputs</h3>
         <form>
             <input type="text"><br>
@@ -362,6 +331,7 @@
             <input type="search"><br>
 
         </form>
+        <div class="card soft" id="controls">
         <h3>Form Input</h3>
         <form>
             <input type="text" placeholder="Text" class="form-input">
@@ -370,7 +340,7 @@
 			<input type="search" placeholder ="Search" class="form-input">
     
         </form>
-		
+		<div class="card soft" id="labels">
 		<h3>Form Label</h3>
 		<form>
 			<div class="form-control">
@@ -399,8 +369,10 @@
 		
 
     </div>
+    <div class="container">
+        <div class="card soft" id="button"></div>
 <h3>Buttons</h3>
-<div class="card soft">
+<div class="card soft" id="button">
 	<h3>Default BUttons </h3>
 	<button>Button </button>
 	
@@ -408,7 +380,7 @@
 	<h3>Form Buttons </h3>
 	
 	<div class="form-conrol">
-		<button type="button"> class="form-button">Button</button>
+		<button type="button" class="form-button">Button</button>
 	</div>
 	<div class="form-control">
 		<input type="button" class="form-button" value="Input">
@@ -421,7 +393,7 @@
     <h2>Hotdog</h2>
 <div class="card soft">
 <div class="form-control">
-    <form class="hotdog">
+    <form class="hotdog" id="hotdog">
         <input type="search" placeholder="Search">
     </form>
     </div>
@@ -469,6 +441,9 @@
     <label>Label <input type="checkbox" id="input-1"></label>
     <label for="input-1">Label</label>
 
+
+
+    <div class="container" id="checkboxes"
     <h3>Heart Checkbox</h3>
     <div class="favorite">
         <input type="checkbox" id="heart-example" class="hidden">
@@ -499,13 +474,92 @@
 
 
 
+</div>
+</div>
+
+  
+
+<h2 id=figures>Figures</h2>
+<div class="card" id="figures">
+    <h3 id="basicfigure"> Basic Figure</h3>
+
+
+     <figure class="figure"> 
+        <img src="https://via.placeholder.com/200x200?text=product" alt="">
+         <figcaption>Product</figcaption>
+         </figure>
+
+
+
+</div>
+<h3>Figure Grid</h3>
+         <div class="grid gap">
+            <div class="col-xs-12 col-md-4">
+                <figure class="figure">
+                    <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                    <figcaption>Product</figcaption>
+
+                </figure>
+                </div>
+             
+                    <div class="col-xs-12 col-md-4">
+                        <figure class="figure">
+                            <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                            <figcaption>Product</figcaption>
+        
+                        </figure>
+                        </div>
+                       
+                            <div class="col-xs-12 col-md-4">
+                                <figure class="figure">
+                                    <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                                    <figcaption>Product</figcaption>
+                
+                                </figure>
+                                </div>
 
 
 
 
+         </div>
+       
 
 
+         <h3>Product Grid</h3>
+         <div class="grid gap">
+           
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure product">
+                        <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                        <figcaption>
+                           <div> Product</div>
+                           <div> $3.99</div>
+                        </figcaption>
+    
+                    </figure>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <figure class="figure product">
+                            <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                            <figcaption>
+                               <div> Product</div>
+                               <div> $3.99</div>
+                            </figcaption>
+        
+                        </figure>
+                        </div>
 
+                        <div class="col-xs-12 col-md-4">
+                            <figure class="figure product">
+                                <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                                <figcaption>
+                                   <div> Product</div>
+                                   <div> $3.99</div>
+                                </figcaption>
+            
+                            </figure>
+                            </div>
+        
 
  </body>
 

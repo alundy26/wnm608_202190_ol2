@@ -1,3 +1,5 @@
+
+
 [
     {
         "name":"Alexandria Lundy", 
@@ -14,7 +16,7 @@
 
 {
     "name":"Michael Parkins", 
-    "type":"Student",
+   "type":"Student",
     "email": "mikepark18@art.edu",
     "classes":[620, 601 ]
 },
@@ -22,7 +24,7 @@
 {
     "name":"Alexandria Lundy", 
     "type":"Student",
-    "email": "alundy2@art.edu",
+    "email":"alundy2@art.edu",
     "classes":[601, 604]
 }
 

@@ -16,30 +16,21 @@ function showUserPage($user){
             </ul>
         </nav>
         <div>
-            <form>
-            <strong>Fullname</strong>
-                <input type="string" name="name" maxlength="45" value=$user->name maxlength="45" size="15">
-          
-            </form>
-
-                 <div>
-                <form>
+            <h2>$user->name</h2>
+            <div>
                 <strong>Type</strong>
-                <input type="text" name="name" value=$user->type>
-               
-            
+                <span>$user->type</span>
             </div>
-
             <div>
                <strong>Email</strong>
-               <input type="text" name="fullname" value=$user->email>
+               <span>$user->email</span>
             </div>
             <div>
               <strong>Classes</strong>
-              <input type="text" name="fullname" value=$classes>
+              <span>$classes</span>
             </div>
-            <br>
-            <input type="submit" value="Submit">
+  
+  
   
   
   
@@ -102,9 +93,12 @@ $users=file_get_json("../data/users.json");
         <?php
             for ($i=0; $i<count($users);$i++){
                     echo "<li>
-                  <a href='admin/users.php?id=$i'>{$users[$i]->name}</a>
-                  
+                    <form>
+                    <label for='name'> Full Name </label><br>
+                <input type="text" id="name" value= 'admin/users.php?id=$i'>{$users[$i]->name}><br>
+                  </form>
                     </li>";
+                    </form>
             }
         ?>
 </ul>

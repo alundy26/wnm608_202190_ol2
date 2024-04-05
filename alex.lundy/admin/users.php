@@ -22,7 +22,7 @@ function showUserPage($user){
           
             </form>
 
-                 <div>
+                 <div>`````
                 <form>
                 <strong>Type</strong>
                 <input type="text" name="name" value=$user->type>

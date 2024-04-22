@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 
 <html lang="en">
     <head>
@@ -27,19 +27,250 @@
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="cart">Cart</a></li>
             </ul>
-        </nav>
+        </nav> 
 </header>
 
+
+
+
 <div class="container">
-    <div class="card soft">
-        <h2>Product List</h2>
-        <ul>
-            <li><a href="product_item.php">Product 1</a></li>
-            <li><a href="product_item.php">Product 2</a></li>
-            <li><a href="product_item.php">Product 3</a></li>
-            <li><a href="product_item.php">Product 4</a></li>
-        </ul>
+<div class="form-control">
+    <form class="hotdog dark">
+        <input type="search" placeholder="Search">
+    </form>
     </div>
+   
+        <h1>Art Supplies</h1>
+        
+        <?php
+        include_once "lib/php/functions.php";
+        include_once "parts/templates.php";
+
+        $result = makeQuery(makeConn(), "SELECT * FROM `products` ORDER BY `date_create`
+        "
+        
+        );
+
+        echo "<div class='grid gap'>",array_reduce($result, 'productListTemplate'),"</div>";
+
+       
+        
+
+
+        ?>
+       
+  
+
+
+    <div class="grid gap">
+           
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure product">
+                        <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                        <figcaption>
+                           <div><a href="product_item.php">Product 1</a> </div>
+                           <div> $3.99</div>
+                           <div class="favorite"> 
+                                        <input type="checkbox" id="heart-example" class="hidden">
+                                        <label for="heart-example">♥</label> Favorite
+
+    </div>
+                        </figcaption>
+    
+                    </figure>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <figure class="figure product">
+                            <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                            <figcaption>
+                            <div><a href="product_item.php">Product 2</a> </div>
+                               <div> $3.99</div>
+                               <div class="favorite"> 
+                                        <input type="checkbox" id="heart-example" class="hidden">
+                                        <label for="heart-example">♥</label> Favorite
+
+    </div>
+                            </figcaption>
+        
+                        </figure>
+                        </div>
+
+                        <div class="col-xs-12 col-md-4">
+                            <figure class="figure product">
+                                <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                                <figcaption>
+                                <div><a href="product_item.php">Product 3</a> </div>
+                                   <div> $3.99</div>
+                                   <div class="favorite"> 
+                                        <input type="checkbox" id="heart-example" class="hidden">
+                                        <label for="heart-example">♥</label> Favorite
+
+    </div>
+                                </figcaption>
+            
+                            </figure>
+                            </div>
+        
+
+ <br>
+
+</div>
+<div class="grid gap">
+           
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure product">
+                        <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                        <figcaption>
+                        <div><a href="product_item.php">Product 4</a> </div>
+                           <div> $3.99</div>
+                           <div class="favorite"> 
+                                        <input type="checkbox" id="heart-example" class="hidden">
+                                        <label for="heart-example">♥</label> Favorite
+
+    </div>
+                           
+                        </figcaption>
+    
+                    </figure>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <figure class="figure product">
+                            <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                            <figcaption>
+                            <div><a href="product_item.php">Product 5</a> </div>
+                               <div> $3.99</div>
+                               <div class="favorite"> 
+                                        <input type="checkbox" id="heart-example" class="hidden">
+                                        <label for="heart-example">♥</label> Favorite
+
+    </div>
+                            </figcaption>
+        
+                        </figure>
+                        </div>
+
+                        <div class="col-xs-12 col-md-4">
+                            <figure class="figure product">
+                                <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                                
+                                <figcaption>
+                                <div><a href="product_item.php">Product 6</a> </div>
+                                   <div> $3.99</div>
+                                   <div class="favorite"> 
+                                        <input type="checkbox" id="heart-example" class="hidden">
+                                        <label for="heart-example">♥</label> Favorite
+
+    </div>
+                                </figcaption>
+            
+                            </figure>
+                            </div>
+
+                            <div class="col-xs-12 col-md-4">
+                            <figure class="figure product">
+                                <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                                
+                                <figcaption>
+                                <div><a href="product_item.php">Product 7</a> </div>
+                                   <div> $3.99</div>
+                                   <div class="favorite"> 
+                                        <input type="checkbox" id="heart-example" class="hidden">
+                                        <label for="heart-example">♥</label> Favorite
+
+    </div>
+                                </figcaption>
+            
+                            </figure>
+                            </div>
+
+                            <div class="col-xs-12 col-md-4">
+                            <figure class="figure product">
+                                <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                                
+                                <figcaption>
+                                <div><a href="product_item.php">Product 8</a> </div>
+                                   <div> $3.99</div>
+                                   <div class="favorite"> 
+                                        <input type="checkbox" id="heart-example" class="hidden">
+                                        <label for="heart-example">♥</label> Favorite
+
+    </div>
+                                </figcaption>
+            
+                            </figure>
+                            </div>
+
+                            <div class="col-xs-12 col-md-4">
+                            <figure class="figure product">
+                                <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                                
+                                <figcaption>
+                                <div><a href="product_item.php">Product 9</a> </div>
+                                   <div> $3.99</div>
+                                   <div class="favorite"> 
+                                        <input type="checkbox" id="heart-example" class="hidden">
+                                        <label for="heart-example">♥</label> Favorite
+
+    </div>
+                                </figcaption>
+            
+                            </figure>
+                            </div>
+        
+                            
+                            <div class="col-xs-12 col-md-4">
+                            <figure class="figure product">
+                                <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                                
+                                <figcaption>
+                                <div><a href="product_item.php">Product 10</a> </div>
+                                   <div> $3.99</div>
+                                   <div class="favorite"> 
+                                        <input type="checkbox" id="heart-example" class="hidden">
+                                        <label for="heart-example">♥</label> Favorite
+
+    </div>
+                                </figcaption>
+            
+                            </figure>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                            <figure class="figure product">
+                                <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                                
+                                <figcaption>
+                                <div><a href="product_item.php">Product 11</a> </div>
+                                   <div> $3.99</div>
+                                   <div class="favorite"> 
+                                        <input type="checkbox" id="heart-example" class="hidden">
+                                        <label for="heart-example">♥</label> Favorite
+
+    </div>
+                                </figcaption>
+            
+                            </figure>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                            <figure class="figure product">
+                                <img src="https://via.placeholder.com/400x400?text=product" alt="">
+                                
+                                <figcaption>
+                                <div><a href="product_item.php">Product 12</a> </div>
+                                   <div> $3.99</div>
+                                   <div class="favorite"> 
+                                        <input type="checkbox" id="heart-example" class="hidden">
+                                        <label for="heart-example">♥</label> Favorite
+
+    </div>
+                                </figcaption>
+            
+                            </figure>
+                            </div>
+
+ 
+
+</div>
+
 
 </body>
 </html>

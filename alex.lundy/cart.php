@@ -1,42 +1,43 @@
-<!DOCTYPE html>
+<?php
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+$product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
+?><!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Document</title>
-        <meta name ="viewport" content="width=device-width">
-    
-    
-    <link rel="stylesheet" href="../lib/css/styleguide.css">
-    <link rel="stylesheet" href="../lib/css/gridsystem.css">
-    <link rel="stylesheet" href="../css/storetheme.css">
-</head>
-<body>
+<head>
+    <meta charset ="UTF-8">
+    <title>Cart page </title>
 
-<header class="navbar">
-    <div class="container display-flex">
-        <div class="flex-none">
-            <h1>Store</h1>
-        </div>
-        <div class="flex-stretch"></div>
-        <nav class="nav nav-flex flex-none">
-        <ul>
-                <li><a href="store_home.php">Home</a></li>
-                <li><a href="product_list.php">Shop Now</a></li>
-                <li><a href="mission.php">Our Mission</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="cart.php">Cart</a></li>
-            </ul>
-        </nav>
-</header>
+    <?php include "parts/meta.php"; ?>
+</head>
+
+<body>
+<?php include "parts/navbar.php"; ?>
 
 <div class="container">
-    <div class="card soft">
-        <h2>Cart</h2>
-      <h1>Shopping Cart is Empty</h1>
-
-       
-    </div>
-
+   <h2>In Your Cart</h2>
+   <div class="grid gap">
+    <div class="col-xs-12 col-md-7">
+        <div class="card soft">
+            <?=array_reduc($cart, function($r,$o){return $r. "<div>$o->title</div>";}) ?>
+</div>
+<div class="col-xs-12 col-md-5">
+    <div class="card soft flat">
+        <div class="flex-stretch"><strong>Sub Total</strong></div>
+        <div class="flex-none">&dollar; 3.50</div>
+</div>
+<div class="card soft flat">
+        <div class="flex-stretch"><strong>Taxesl</strong></div>
+        <div class="flex-none">&dollar; 3.50</div>
+</div>
+<div class="card soft flat">
+        <div class="flex-stretch"><strong>Total</strong></div>
+        <div class="flex-none">&dollar; 7.o0</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>

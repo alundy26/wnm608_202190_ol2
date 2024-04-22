@@ -79,6 +79,8 @@ a:hover{
 .flex-align-center{align-items:center;}
 .flex-justify-center{justify-content:center;}
 
+.fex-column{flex-direction: column;}
+
 /* Small Classes */
 .media-image{
     max-width:100%;
@@ -200,6 +202,35 @@ padding: 0.5em 1em;
     background-color: var(--color-main-dark);
     color:var(--color-neutral-light);
 }
+
+.card.medium{
+   background-color:var(--color-neutral-medium);
+}
+
+.card.flat{
+    padding:0;
+}
+
+
+
+.card-section~.card-section{
+    border-top: 1px solid var(--color-neutral-light);
+}
+
+.card-section{
+    padding: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .view-window{
     height:50vh;

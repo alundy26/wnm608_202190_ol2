@@ -1,3 +1,9 @@
+ <?php
+ include_once "lib/php/functions.php";
+ include_once "parts/templates.php";
+
+ ?>
+ 
  <!DOCTYPE html>
 
 <html lang="en">
@@ -25,7 +31,7 @@
                 <li><a href="product_list.php">Shop Now</a></li>
                 <li><a href="mission.php">Our Mission</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="cart">Cart</a></li>
+                <li><a href="cart.php">Cart</a></li>
             </ul>
         </nav> 
 </header>
@@ -43,9 +49,7 @@
         <h1>Art Supplies</h1>
         
         <?php
-        include_once "lib/php/functions.php";
-        include_once "parts/templates.php";
-
+       
         $result = makeQuery(makeConn(), "SELECT * FROM `products` ORDER BY `date_create`
         "
         

@@ -2,6 +2,9 @@
 include_once "lib/php/functions.php";
 $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
+
+//print_p($_product);
+
 //print_p($product);
 ?>
 
@@ -32,7 +35,7 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['i
                 <li><a href="product_list.php">Shop Now</a></li>
                 <li><a href="mission.php">Our Mission</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="cart">Cart</a></li>
+                <li><a href="cart.php">Cart</a></li>
             </ul>
         </nav>
 
@@ -99,10 +102,17 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['i
         eveniet magni libero veritatis sed? Ratione harum possimus 
         modi? Consequuntur cum deserunt eos!</p>
    
+
+    <div class="col-xs-12 col-md-5">
+    <form class="card soft flat" method="post" action="cart_actions.php?action=add-to-cart">
+
+    <input type="hidden" name="product-id" value="<?product->id ?>">
+
+
         <div class="card-section">
         <label for="product-amount" class="form-label">Amount</label>
-        <div class="form-select" id="product-amount">
-        <select>
+        <div class="form-select" >
+        <select id="product-amount" name="product-amount">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -114,9 +124,10 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['i
         <option>9</option>
         <option>10</option>
     </select>
+    
 
-    <div class="form-control">
-		<a href="product_added_to_cart.php?id= $product->id ?>" class="form-button">Add to Cart</a>
+    <div class="card-section">
+		<input type="submit" class="form-button" value="Add to Card">
 	</div>
 </div>
 </div>

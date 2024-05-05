@@ -1,6 +1,31 @@
 <?php
 include_once "lib/php/functions.php";
-$product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+
+$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
+
+if ($id <= 0) {
+    
+    exit("Invalid product ID");
+}
+
+
+$query = "SELECT * FROM `products` WHERE `id` = ?";
+
+
+$conn = makeConn();
+
+
+$products = makeQuery($conn, $query, "i", [$id]);
+
+
+if (!empty($products)) {
+    
+    $product = $products[0];
+} else {
+    
+    exit("Product not found");
+}
 
 
 //print_p($_product);
@@ -91,22 +116,21 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['i
         </ul>
     </nav>
     <br>
-    <img class= "img_left" img src="https://via.placeholder.com/400x400?text=product" alt="">
+    
     <br>
     <div class="card-section">
-        <h2><?=$product->name ?></h2>
-       <p><?=$product->price ?></p>
+        <img class= "img_left" img src="/img/store/<?= $product->images ?>" alt="">
+        <h2><?= $product->name ?></h2>
+       <p><?= $product->price ?></p>
        <h3> Description </h3>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. N
-        eque, eaque quod laborum sit eos quasi ratione molestiae 
-        eveniet magni libero veritatis sed? Ratione harum possimus 
-        modi? Consequuntur cum deserunt eos!</p>
+       <p>
+           <?= $product->description ?></p>
    
 
     <div class="col-xs-12 col-md-5">
     <form class="card soft flat" method="post" action="cart_actions.php?action=add-to-cart">
 
-    <input type="hidden" name="product-id" value="<?product->id ?>">
+    <input type="hidden" name="product-id" value="<?= $product->id ?>">
 
 
         <div class="card-section">
@@ -133,9 +157,9 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['i
 </div>
 
     <div class="card soft flat">
-        <div "class="faq">
+        <div class="faq">
         <div class="question">
-        <img class= "img_left" img src="https://via.placeholder.com/100x100?text=product" alt="">
+        <img class= "img_left" img src="/img/store/$product->images" alt="">
             <h3>Details </h3>
 
             <svg width="15" height="10" viewBox="0 0 42 24">

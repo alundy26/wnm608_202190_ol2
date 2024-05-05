@@ -25,7 +25,7 @@ print_p(getCartItems());
    <div class="grid gap">
     <div class="col-xs-12 col-md-7">
         <div class="card soft">
-            <?=array_reduc($cart, function($r,$o){return $r. "<div>$o->title</div>";}) ?>
+            <?=array_reduce($cart, function($r,$o){return $r. "<div>$o->title</div>";}) ?>
 </div>
 <div class="col-xs-12 col-md-5">
     <?= cartTotals() ?>

@@ -30,22 +30,7 @@
     });
     </script>
 </head>    	
-<header class="navbar">
-    <div class="container display-flex">
-        <div class="flex-none">
-            <h1>Store</h1>
-        </div>
-        <div class="flex-stretch"></div>
-        <nav class="nav nav-flex flex-none">
-            <ul>
-                <li><a href="store_home.php">Home</a></li>
-                <li><a href="product_list.php">Shop Now</a></li>
-                <li><a href="mission.php">Our Mission</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="cart.php">Cart</a></li>
-            </ul>
-        </nav>      
-</header>
+<?php include "parts/navbar.php"; ?>
 <body>
 
     <div class="container">

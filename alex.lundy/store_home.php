@@ -25,7 +25,7 @@
                 <li><a href="product_list.php">Shop Now</a></li>
                 <li><a href="mission.php">Our Mission</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="cart">Cart</a></li>
+                <li><a href="product_cart.php">Cart</a></li>
             </ul>
         </nav>
 </header>

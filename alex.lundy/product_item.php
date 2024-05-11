@@ -1,5 +1,6 @@
 <?php
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
@@ -48,21 +49,7 @@ if (!empty($products)) {
 </head>
 <body>
 
-<header class="navbar">
-    <div class="container display-flex">
-        <div class="flex-none">
-            <h1>Store</h1>
-        </div>
-        <div class="flex-stretch"></div>
-        <nav class="nav nav-flex flex-none">
-        <ul>
-                <li><a href="store_home.php">Home</a></li>
-                <li><a href="product_list.php">Shop Now</a></li>
-                <li><a href="mission.php">Our Mission</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="cart.php">Cart</a></li>
-            </ul>
-        </nav>
+<?php include "parts/navbar.php"; ?>
 
         <style type="text/css">
 
@@ -156,11 +143,9 @@ if (!empty($products)) {
 </div>
 </div>
 
-    <div class="card soft flat">
-        <div class="faq">
-        <div class="question">
-        <img class= "img_left" img src="/img/store/$product->images" alt="">
-            <h3>Details </h3>
+   
+   
+            <h3>Description </h3>
 
             <svg width="15" height="10" viewBox="0 0 42 24">
             </svg>
@@ -171,6 +156,15 @@ if (!empty($products)) {
         </div>
         </div>
         </div>
+        </div>
+        
+        <div class="container">
+            <div class="card soft">
+                <h2> Recommended Products</h2>
+                <?php
+                recommendedSimilar($product->category, $product->id);
+                ?>
+            </div>
         </div>
    
 </body>

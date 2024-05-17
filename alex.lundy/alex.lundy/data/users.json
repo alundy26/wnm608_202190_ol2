@@ -1,0 +1,32 @@
+
+
+[
+    {
+        "name":"Alexandria Lundy", 
+        "type":"Student",
+        "email": "alundy2@art.edu",
+        "classes":[601, 604]
+},
+{
+    "name":"Jill Jay", 
+    "type":"Student",
+    "email": "jjill@art.edu",
+    "classes":[601, 600, 615]
+},
+
+{
+    "name":"Michael Parkins", 
+   "type":"Student",
+    "email": "mikepark18@art.edu",
+    "classes":[620, 601 ]
+},
+
+{
+    "name":"Alexandria Lundy", 
+    "type":"Student",
+    "email":"alundy2@art.edu",
+    "classes":[601, 604]
+}
+
+
+]

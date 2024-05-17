@@ -66,7 +66,6 @@ echo $fullname;
 <?php
 //Superglobal
 //?name= Alex
-echo "<a href='?name= Alex'></a>";
 echo "<div>My name is {$_GET['name']}</div>";
 //?name=Alex&type=textarea
 echo "<{$_GET['type']}>My name is {$_GET['name']}<{$_GET['type']}>";

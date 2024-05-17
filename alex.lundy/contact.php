@@ -11,31 +11,37 @@
     <link rel="stylesheet" href="../lib/css/gridsystem.css">
     <link rel="stylesheet" href="../css/storetheme.css">
 </head>
+
+<?php include "parts/navbar.php"; ?>
+
 <body>
-
-<header class="navbar">
-    <div class="container display-flex">
-        <div class="flex-none">
-            <h1>Store</h1>
+    <div>
+        <div class= "card soft display-flex">
+            <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$create_or_update">
+                <h2>Contact Us</h2>
+                <div class="form-control">
+                    <label class="form-label" for="guest-name">Name</label>
+                    <input class="form-input" name="guest-name" id="guest-name" type="text" value="" placeholder="Enter your name">
+                </div>
+                <div class="form-control">
+                    <label class="form-label" for="guest-email">Email</label>
+                    <input class="form-input" name="guest-email" id="guest-email" type="text" value="" placeholder="Enter your Email address">
+                </div>
+                <div class="form-control">
+                    <label class="form-label" for="user-description">Phone Number</label>
+                    <input class="form-input" name="guest-email" id="guest-email" type="text" value="" placeholder="Enter your phone number">
+                </div>
+                <div class="form-control">
+                    <label class="form-label" for="guest-message">Price</label>
+                    <textarea class="form-input" name="user-description" id="user-description" placeholder="Enter your message here..."></textarea>
+                </div>
+                <div class= "card soft display-flex">
+                    <div class="form-control">
+                        <input class="form-button" type="submit" value="Send Message">
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="flex-stretch"></div>
-        <nav class="nav nav-flex flex-none">
-        <ul>
-                <li><a href="store_home.php">Home</a></li>
-                <li><a href="product_list.php">Shop Now</a></li>
-                <li><a href="mission.php">Our Mission</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="cart">Cart</a></li>
-            </ul>
-        </nav>
-</header>
-
-<div class="container">
-    <div class="card soft">
-        <h1>Contact</h2>
-       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quos, optio molestiae rem nam exercitationem pariatur consectetur dolorum, provident praesentium quidem placeat, cupiditate laudantium minima voluptatem impedit qui. Recusandae, asperiores.</p>
-       
     </div>
-
 </body>
 </html>

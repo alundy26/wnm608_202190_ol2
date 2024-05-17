@@ -1,7 +1,5 @@
 <?php
 
-//session_start();
-
 function print_p($v){
     echo "<pre>",print_r($v), "</pre>";
 }
@@ -19,20 +17,52 @@ function makeConn(){
     $conn->set_charset('utf8');
     return $conn;
 }
-
-
-
-
-function makeQuery($conn,$qry){
-    $result = $conn->query($qry);
-    if($conn->errno) die($conn->error);
-    $a=[];
-    while($row = $result->fetch_object()){
-        $a[]=$row;
+function makePDOConn(){
+    try{
+        $conn = new PDO(...PDOAuth());
+    } catch(PDOException $e){
+        die($e->getMessage());
     }
-    return $a;
+    return $conn;
 }
 
 
+
+function makeQuery($conn, $qry, $types = null, $params = null){
+    // Prepare the SQL statement
+    $stmt = $conn->prepare($qry);
+
+    // Check if the statement preparation was successful
+    if (!$stmt) {
+        die("Error preparing statement: " . $conn->error);
+    }
+
+    // Bind parameters if provided
+    if (!empty($params) && !empty($types)) {
+        $stmt->bind_param($types, ...$params);
+    }
+
+    // Execute the prepared statement
+    $stmt->execute();
+
+    // Check for errors during execution
+    if ($stmt->errno) {
+        die("Error executing statement: " . $stmt->error);
+    }
+
+    // Get the result set
+    $result = $stmt->get_result();
+
+    // Fetch the data into an array of objects
+    $data = [];
+    while ($row = $result->fetch_object()) {
+        $data[] = $row;
+    }
+
+    // Close the statement
+    $stmt->close();
+
+    return $data;
+}
 
 ?>

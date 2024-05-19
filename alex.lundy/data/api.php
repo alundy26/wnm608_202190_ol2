@@ -6,7 +6,7 @@ $output = [];
 
 $data = json_decode(file_get_contents("php://input"));
 
-//print_p($data);
+
 
 switch ($data->type) {
    case "products_all":

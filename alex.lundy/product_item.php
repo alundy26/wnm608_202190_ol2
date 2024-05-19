@@ -29,9 +29,6 @@ if (!empty($products)) {
 }
 
 
-//print_p($_product);
-
-//print_p($product);
 ?>
 
 <!DOCTYPE html>
@@ -96,10 +93,9 @@ if (!empty($products)) {
     <div class="card soft">
     <nav class="nav nav-crumbs">
         <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
+            <li><a href="http://alexlundydesigns.com:8000/index.php">Home</a></li>
+            <li><a href="http://alexlundydesigns.com:8000/product_list.php">Shop</a></li>
+           
         </ul>
     </nav>
     <br>

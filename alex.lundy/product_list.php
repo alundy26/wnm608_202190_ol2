@@ -32,6 +32,10 @@
 </head>    	
 <?php include "parts/navbar.php"; ?>
 <body>
+<div class="view-window" style="background-image:url(img/productbanner2.png)">
+        <div class="fill-parent display-flex flex-align-center flex-justify center">
+        </div>
+    </div>
 
     <div class="container">
             <h1>Art Supplies</h1>
@@ -44,12 +48,10 @@
                 </form>
                 
                 <div class="form-control">
-                    <div class="card soft display-flex"> 
+                    <div class="card soft"> 
+                        <div class="display-flex flex-wrap">
                         <div class="flex-none">
                             <button data-filter="category" data-value="" type="button" class="form-button">All</button>
-                        </div>
-                        <div class="flex-none">
-                            <button data-filter="category" data-value="Paint" type="button" class="form-button">Paint</button>
                         </div>
                         <div class="flex-none">
                             <button data-filter="category" data-value="Tools" type="button" class="form-button">Tools</button>
@@ -57,10 +59,7 @@
                         <div class="flex-none">
                             <button data-filter="category" data-value="Drawing" type="button" class="form-button">Drawing</button>
                         </div>
-                        <div class="flex-none">
-                            <button data-filter="category" data-value="Crafts" type="button" class="form-button">Crafts</button>
-                        </div>
-                <div class="flex-none">
+                <div class="flex-wrap">
                     <div class="form-select">
                         <select class="js-sort">
                             <option value="1">Newest</option>
@@ -71,7 +70,7 @@
                     </div>
                 </div>
             </div>
-                    
+</div>
 
             <div class='productlist grid gap'></div>
     </div>

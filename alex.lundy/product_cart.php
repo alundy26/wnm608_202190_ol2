@@ -5,7 +5,7 @@ include_once "parts/templates.php";
 $id = isset($_GET['id']) ? (int)$_GET['id'] : null;
 
 if ($id === null) {
-    header("Location: admin/index.php");
+    header("Location: index.php");
     exit;
 }
 

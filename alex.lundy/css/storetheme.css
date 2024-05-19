@@ -1,4 +1,4 @@
-/*This is specific to website only */
+
 :root{
     --color-offwhite: #effdee;
 }
@@ -100,7 +100,7 @@ body{
             position:relative;
             display:block;
             top:initial;
-            width:100%
+            width:100%;
             height: initial;
             opacity:1;
             background-color:initial;
@@ -123,13 +123,37 @@ body{
 		}
 	}
 	
+    .menu-button label{display:none;}
+
 	@media(max-width:400px){
 		.navbar .display-flex{
-			display:block;
+			flex-wrap:wrap;
 		}
-	}
-	
-	.navbar .nav li{
-		line-height:2em;h
-	}
+        .navbar .nav{
+            width:100%;
+            display:none;
+        }
+        .navbar .nav-flex ul{
+            display: block;
+        }
+	    .navbar .nav li{
+		line-height:2em;
+    	}
+     .menu-button label{
+        display:block;
+        padding:0 1em;
+    }
+    
+
+    #menu:checked+.navbar .nav{
+        display:block;
+    }
 }
+    
+.badge::after {
+    content: ')';
+  }
+
+.badge::before {
+    content: '(';
+  }

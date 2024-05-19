@@ -1,25 +1,23 @@
 <?php
 include_once "lib/php/functions.php";
 
-
-function addToCart($p) {
-    $_SESSION['cart'][] = $p['product-id'];
-}
-
-
 print_p([$_GET, $_POST]);
+
 
 switch($_GET['action']) {
     case "add-to-cart":
         $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=" . $_POST['product-id'])[0];
-        addToCart($_POST);
+        addToCart($_POST['product-id'],$_POST['product-name'],$_POST['product-amount'], $_POST['product-price']);
         header("location:product_added_to_cart.php?id={$_POST['product-id']}");
         break;
     case "update-cart-item":
-        // Update cart item logic
+        $p = cartItemById($_POST['id']);
+        $p->amount = $_POST['amount'];
+        header("location:cart.php");
         break;
     case "delete-cart-item":
-        // Delete cart item logic
+       $_SESSION['cart'] = array_filter($_SESSION['cart'], function($o){return $o->id!=$_POST[
+        id];});
         break;
     case "reset-cart":
         resetCart();

@@ -1,12 +1,9 @@
-/*The guide for styling generic*/
 
-/* CSS RESET */
 
 *, *::after, *::before {
     box-sizing:border-box;
 }
 
-/* Pick these colors during moodboard and styleguide phase, write them down somewhere for reference during design */
 :root {
     --color-neutral-light: #effdee;
     --color-neutral-medium: #e4fde1;
@@ -19,7 +16,6 @@
     --color-black: #000;
     --color-white: #fff;
 
-    /* Rem: root em value based on document size */
     --header-height: 3rem;
     --spacing: 1rem;
 
@@ -27,9 +23,6 @@
     --font-sans: Helvetica, Arial, sans-serif;
 }
 
-/*Target elements commonly changed by designer */
-/*Setting margin to 0 helps have a more flexible design layout */
-/* Choose a font that degrades down and is available on all types of devices, no use serif, not readable */
 body {
     margin: 0;
     font-size: 100%;
@@ -45,7 +38,6 @@ h6 {
     font-family: var(--font-serif);
 }
 
-/* anchors inherit from parents */
 a {
     color: inherit;
     font-weight: bold;
@@ -56,7 +48,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/*Layout Classes */
 .container {
     max-width: 800px;
     margin-right: auto;
@@ -79,7 +70,6 @@ a:hover {
     display: inline-block;
 }
 
-/* grow shrink basic */
 .flex-stretch {
     flex: 1 1 auto;
 }
@@ -100,7 +90,8 @@ a:hover {
     flex-direction: column;
 }
 
-/* Small Classes */
+.flex-wrap{flex-wrap:wrap;}
+
 .media-image {
     max-width: 100%;
     vertical-align: text-bottom;
@@ -110,7 +101,6 @@ a:hover {
     display: none;
 }
 
-/*Component classes */
 .nav ul {
     list-style-type: none;
     margin-top: 0;
@@ -191,7 +181,7 @@ a:hover {
     padding: 0 0.5em;
 }
 
-/*CARD */
+
 .card {
     background-color: var(--color-white);
     margin-top: 1em;
@@ -290,7 +280,6 @@ a:hover {
     padding: 1em;
 }
 
-/*Forms*/
 .form-control {
     margin: 1em 0;
 }
@@ -392,7 +381,6 @@ a:hover {
     color: var(--color-neutral-medium);
 }
 
-/*Toggle */
 .toggle label {
     font-size: 1.3rem;
     display: inline-block;

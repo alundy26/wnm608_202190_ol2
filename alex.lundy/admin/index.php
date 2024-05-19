@@ -1,99 +1,3 @@
-<<<<<<< HEAD
-$empty_product = (object)[
-    "title"=>"",
-    "description"=>"",
-    "price"=>"",
-    "category"=>"",
-    "thumbnail"=>"",
-    "images"=>"",
-    "quantity"=>""
-    ]; 
-    
-
-
-
-//templates 
-function productListItem($r,$o){
-    return $r. <<<HTML
-    <div>A href="{$_SERVER['PHP_SELF']}?id=$o->title</a></div>
-    HTML; 
-}
-
-function showProductPage($r, $o){
-    $id = $_GET['id'];
-    $addoredit = $id == "new" ? "Add" : "Edit";
-    $createorupdate = $id =="new"? "create" : "update";
-    $images = implode(",", $user->images);
-
-
-    //heredoc
-$display = <<<HTML
-<div>
-    <h2>$user->name</h2>
-<div>
-    <strong>Type</strong>
-    <span>$o->type</span>
-</div>
-<div>
-    <strong>Email</strong>
-    <span>$user->type</span>
-</div>
-<div>
-    <strong>images</strong>
-    <span>$user->type</span>
-</div>
-
-$form = <<<HTML
-<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
-    <h2>$addoredit User</h2>
-    <label class="form-control">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//this is where video 1 code goes 
-
-<div class="container">
-
-<?php
-if(isset($_GET['id'])){
-showProductPage();
-    $_GET['id']=="new" ?
-        $empty_product : 
-        makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0]
-);
-//showPRoductPage()
-}else{
-
-    <h2>Product List</h2>
-
-    <?php
-
-    $result= makeQuery(makeConn(),"SELECT * FROM `products`");
-
-
-echo array_reduce($result, 'productListItem');
-
-}
-   
-
-
-
-    ?>
-=======
 
     <link rel="stylesheet" href="../lib/css/styleguide.css">
     <link rel="stylesheet" href="../lib/css/gridsystem.css">
@@ -111,8 +15,6 @@ $empty_product = (object)[
 ];
 
 
-
-//Logic
 try {
     $conn = makePDOConn();
     if(isset($_GET['action'])) {
@@ -180,22 +82,6 @@ try {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Templates
 function productListItem($r, $o){
     return $r . <<<HTML
     <div class="card soft">
@@ -208,8 +94,6 @@ function productListItem($r, $o){
     HTML;
 }
 
-
-
 function showProductPage($o){
     $id = $_GET['id'];
     $add_or_edit = $id == "new" ? "Add" : "Edit";
@@ -217,7 +101,6 @@ function showProductPage($o){
     $images = implode(", ", explode(",", $o->images));
     $thumbnail = implode(", ", explode(",", $o->thumbnail));
 
-    //heredoc
     $display=<<<HTML
          <div>
             <h2>$o->name</h2>
@@ -242,9 +125,8 @@ function showProductPage($o){
                 <Strong>Thumbnail:</strong>
                 <span class=""><img src='img/thumb/$o->thumbnail'></span>
             </div>
-
-        
-        HTML;
+         </div>
+    HTML;
 
     $form = <<<HTML
         <div>
@@ -261,7 +143,6 @@ function showProductPage($o){
                 <div class="form-control">
                     <label class="form-label" for="user-description">Description</label>
                     <textarea class="form-input" name="user-description" id="user-description" placeholder="Enter the Product Description">$o->description</textarea>
-
                 </div>
 
                 <div class="form-control">
@@ -282,25 +163,26 @@ function showProductPage($o){
             </form>
         </div>
     HTML;
+
     $output = $id == "new" ? "<div class='card soft'>$form</div>" :
-        "<div class='grid gap'>
-            <div class='col-xs-12 col-md-7'><div class='card soft'>$display</div></div>
-            <div class='col-xs-12 col-md-5'><div class='card soft'>$form</div></div>
+        "<div class='flex-container'>
+            <div class='card'>$display</div>
+            <div class='card'>$form</div>
         </div>";
 
     $delete = $id == "new" ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a>";
 
     echo <<<HTML
-    <div  class="card soft">
+    <div class="card soft">
         <nav class="display-flex">
             <div class="flex-stretch"><a href="{$_SERVER['PHP_SELF']}">Back</a></div>
             <div class="flex-none">$delete</div>
         </nav>
     </div>
     $output
-    HTML;
+HTML;
 }
-?> 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -308,6 +190,19 @@ function showProductPage($o){
     <meta charset="UTF-8">
     <title>Product Admin Page</title>
     <?php include "../parts/meta.php"; ?>
+    <style>
+        .flex-container {
+            display: flex;
+            gap: 20px;
+        }
+        .flex-container .card {
+            flex: 1;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header class="navbar">
@@ -327,25 +222,18 @@ function showProductPage($o){
 
     <div class="container">
         <?php
-        if(isset($_GET['id'])){
+        if (isset($_GET['id'])) {
             $product = $_GET['id'] == "new" ? $empty_product : makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=" . intval($_GET['id']))[0];
-             showProductPage($product);
+            showProductPage($product);
         } else {
-
         ?>
-        <h2>Product List</h2>
+            <h2>Product List</h2>
             <?php
-            
             $products = makeQuery(makeConn(), "SELECT * FROM `products` ORDER BY `date_create`");
-            
             echo array_reduce($products, 'productListItem', '');
-    
             ?>
         </div>
-    
     <?php } ?>
-        
     </div>
 </body>
-
->>>>>>> bf5855649918f2ffc0fe3100d2d122f9857fdb2c
+</html>

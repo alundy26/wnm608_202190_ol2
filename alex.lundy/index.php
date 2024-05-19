@@ -20,10 +20,15 @@ include_once "parts/templates.php";
 
     <?php include "parts/navbar.php"; ?>
 
-    <div class="view-window" style="background-image:url(img/artsupplies.jpg)">
+
+    </div>
         <div class="fill-parent display-flex flex-align-center flex-justify-center">
-           
-        </div>
+        <video autoplay muted loop class="view-window">
+            <source src="img/store/webbanner.mp4" type="video/mp4">
+            Your browser does not support the vidoe tag.
+        </video>
+    </div>
+
     </div>
 
     <div class="container">

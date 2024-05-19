@@ -2,7 +2,6 @@
 include_once "lib/php/functions.php";
 $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
-//print_p($product);
 ?>
 
 <!DOCTYPE html>

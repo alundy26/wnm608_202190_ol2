@@ -15,6 +15,10 @@
 <?php include "parts/navbar.php"; ?>
 
 <body>
+<div class="view-window" style="background-image:url(img/contactbanner2.png)">
+        <div class="fill-parent display-flex flex-align-center flex-justify center">
+        </div>
+    </div>
     <div>
         <div class= "card soft display-flex">
             <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$create_or_update">
